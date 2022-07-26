@@ -31,7 +31,14 @@
 */
 
 //CODE HERE
-
+const pizza = {
+    name : 'cheese pizza',
+    price: 5,
+    category: 'entree',
+    popularity: 1,
+    rating: 1,
+    tags: ['kosher', 'kid friendly', 'family friendly', 'party']
+}
 
 
 //////////////////PROBLEM 2////////////////////
@@ -43,7 +50,7 @@
 */
 
 //CODE HERE
-
+console.log(pizza.popularity)
 
 /*
     Second, log the second tag in your pizza's
@@ -53,7 +60,7 @@
 */
 
 //CODE HERE
-
+console.log(pizza['tags'])
 
 /*
     Third, destructure the price off of the
@@ -63,7 +70,7 @@
 */
 
 //CODE HERE
-
+console.log(pizza.price)
 
 /*
     Fourth, and last, destructure the category
