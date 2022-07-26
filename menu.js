@@ -35,7 +35,7 @@ const pizza = {
     name : 'cheese pizza',
     price: 5,
     category: 'entree',
-    popularity: 1,
+    popularity: 4.8,
     rating: 1,
     tags: ['kosher', 'kid friendly', 'family friendly', 'party']
 }
@@ -60,7 +60,7 @@ console.log(pizza.popularity)
 */
 
 //CODE HERE
-console.log(pizza['tags'])
+console.log(pizza.tags[1])
 
 /*
     Third, destructure the price off of the
@@ -80,7 +80,7 @@ console.log(pizza.price)
 */
 
 //CODE HERE
-
+console.log(pizza.category)
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -95,7 +95,7 @@ console.log(pizza.price)
 */
 
 //CODE HERE
-
+const foodArr = ['Chicago Deep Dish', 20, 'Family Meal', 4.5, 5]
 
 
 //////////////////PROBLEM 4////////////////////
@@ -112,7 +112,7 @@ console.log(pizza.price)
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+const filteredFood = foodArr.filter(/* CALLBACK HERE */)
 
 
 
