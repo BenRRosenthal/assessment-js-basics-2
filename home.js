@@ -122,7 +122,8 @@ const deals = [
 */
 
 //CODE HERE
-
+const regex = '15%'
+deals.forEach(title => console.log(title.replace(regex, '10%')))
 
 
 /*

@@ -112,7 +112,7 @@ const foodArr = ['Chicago Deep Dish', 20, 'Family Meal', 4.5, 5]
 
 //CODE HERE
 
-const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+const filteredFood = foodArr.filter(pizza.tags('family friendly'))
 
 
 
@@ -156,7 +156,11 @@ const filteredFood = foodArr.filter(/* CALLBACK HERE */)
 */
 
 //CODE HERE
-
+const filterByProperty = (property, number, type) => {
+    foodArr.filter(property)
+    property.filter(number)
+    number.filter(type)
+}
 
 /*
     Invoke the `filterByProperty` function passing
@@ -166,3 +170,4 @@ const filteredFood = foodArr.filter(/* CALLBACK HERE */)
 */
 
 //CODE HERE
+console.log(filterByProperty('price', 10, 'above'))
