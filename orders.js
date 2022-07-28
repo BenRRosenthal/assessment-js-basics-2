@@ -35,7 +35,7 @@ class Ticket {
         this.items = items;
         this.orderTime = orderTime;
         this.customerId = customerId;
-        this.status = status
+        this.status = 'queued'
     }
     
     updateStatus(newStatus){
@@ -57,7 +57,7 @@ class Ticket {
 */
 
 //CODE HERE
-let firstTicket = Ticket('pizza, bread, coffee', '11:13 pm', 420, 'queued')
+let firstTicket = new Ticket('pizza, bread, coffee', '11:13 pm', 420,)
 
 /*
     Call the `updateStatus` method on
