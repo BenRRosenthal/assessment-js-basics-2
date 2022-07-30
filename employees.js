@@ -91,7 +91,22 @@ const empTwo = {...empOne}
 */
 
 //CODE HERE
+class Manager extends Employee {
+    constructor(name, shifts, employees){
+        //employees needs to be an array
+        super(name, shifts)
+        this.employees = employees
+    }
+    addEmployee = (emp) =>{
+        this.employees.push(emp)
+    }
 
+    
+    getEmployees = (emp) =>{
+        console.log(`${this.name} manages ${this.employees}`)
+    }    
+    
+}
 
 
 /*
@@ -106,7 +121,7 @@ const empTwo = {...empOne}
 */
 
 //CODE HERE
-
+const manager = new Manager('Alan', ['weekdays'], ['Ben', 'Zach', 'Logan'])
 
 /*
     Call the `getEmployees` method on the
@@ -114,6 +129,7 @@ const empTwo = {...empOne}
 */
 
 //CODE HERE
+manager.getEmployees()
 
 /*
     Call the `addEmployee` method on the 
@@ -122,7 +138,7 @@ const empTwo = {...empOne}
 */
 
 //CODE HERE 
-
+manager.addEmployee('Chip')
 /*
     Call the `getEmployees` method on the
     `manager` object again to confirm 
@@ -130,3 +146,4 @@ const empTwo = {...empOne}
 */
 
 //CODE HERE
+manager.getEmployees()

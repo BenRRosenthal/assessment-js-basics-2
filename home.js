@@ -84,10 +84,10 @@ const canWeDeliverTwo = (zipcode) => {
     if(deliveryAreaZipCodes.includes(zipcode) === true){
         console.log('We deliver to you!')
     } else {
-        console.log(`You are not in our delivery zone`)
+        console.log(`${zipcode} is not in our delivery zone`)
     }
 }
-canWeDeliverTwo(85205)
+canWeDeliverTwo(85204)
 //////////////////PROBLEM 3////////////////////
 /* 
     Below is an array of objects that have some
@@ -122,8 +122,8 @@ const deals = [
 */
 
 //CODE HERE
-const regex = '15%'
-deals.forEach(title => console.log(title.replace(regex, '10%')))
+// const regex = '15%'
+// deals.forEach(title => console.log(title.replace(regex, '10%')))
 
 deals[0].title = deals[0].title.replace('15%', '10%');
 
