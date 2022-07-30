@@ -95,7 +95,24 @@ console.log(pizza.category)
 */
 
 //CODE HERE
-const foodArr = ['Chicago Deep Dish', 20, 'Family Meal', 4.5, 5]
+const foodArr = [
+    {
+        name: 'Chicago Style Cheese Pizza',
+        price: 19.99,
+        category: 'Deep Dish',
+        popularity: 89,
+        rating: 9.0,
+        tags: ['kosher', 'family', 'group', 'lactose']
+    },
+    {
+        name: 'Spaghetti and Meatballs',
+        price: 14.99,
+        category: 'Pasta',
+        popularity: 73,
+        rating: 7.0,
+        tags: ['kosher', 'kid friendly', 'pasta', 'entree']
+    }
+]
 
 
 //////////////////PROBLEM 4////////////////////
@@ -112,7 +129,7 @@ const foodArr = ['Chicago Deep Dish', 20, 'Family Meal', 4.5, 5]
 
 //CODE HERE
 
-const filteredFood = foodArr.filter(pizza.tags('family friendly'))
+const filteredFood = foodArr.filter((food)=>food.tags.includes('Kosher'))
 
 
 
@@ -156,10 +173,16 @@ const filteredFood = foodArr.filter(pizza.tags('family friendly'))
 */
 
 //CODE HERE
-const filterByProperty = (property, number, type) => {
-    foodArr.filter(property)
-    property.filter(number)
-    number.filter(type)
+const filterByProperty = (property, number, type) =>{
+    const filteredArr = foodArr.filter(food=>{
+        if (type === 'above') {
+            return food[property] >= number
+        } else if (type === "below") {
+            return food[property] <= number
+        }
+    })
+return filteredArr
+
 }
 
 /*
@@ -170,4 +193,4 @@ const filterByProperty = (property, number, type) => {
 */
 
 //CODE HERE
-console.log(filterByProperty('price', 10, 'above'))
+console.log(filterByProperty('rating', 8, 'above'))
