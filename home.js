@@ -125,6 +125,7 @@ const deals = [
 const regex = '15%'
 deals.forEach(title => console.log(title.replace(regex, '10%')))
 
+deals[0].title = deals[0].title.replace('15%', '10%');
 
 /*
     The restaurant is going to continue its
@@ -140,3 +141,4 @@ deals.forEach(title => console.log(title.replace(regex, '10%')))
 */
 
 //CODE HERE
+deals[1].desc = deals[1].desc.replace('march', 'April').trim()
